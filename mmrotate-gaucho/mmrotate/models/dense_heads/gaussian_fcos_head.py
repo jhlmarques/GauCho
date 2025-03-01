@@ -239,12 +239,7 @@ class GaussianFCOSHead(RotatedFCOSHead):
                                                         pos_bbox_preds)
             
             pos_decoded_target_preds = bbox_coder.decode(pos_points, pos_bbox_targets)
-
-            if self.gaussian_centerness:
-                # Calculate gaussian centerness 
-                pos_centerness_targets = self.gaussian_centerness_target(pos_points, pos_decoded_target_preds)
-            else:
-                pos_centerness_targets = self.centerness_target(pos_bbox_targets)
+            pos_centerness_targets = self.centerness_target(pos_bbox_targets)
 
             centerness_denorm = max(reduce_mean(pos_centerness_targets.sum().detach()), 1e-6)
             
@@ -287,26 +282,6 @@ class GaussianFCOSHead(RotatedFCOSHead):
                 loss_cls=loss_cls,
                 loss_bbox=loss_bbox,
                 loss_centerness=loss_centerness)
-
-    def gaussian_centerness_target(self, pos_points, pos_bbox_targets):
-        """Compute gaussian centerness targets.
-
-        Args:
-            pos_bbox_targets (Tensor): BBox targets of positive bboxes in shape
-                (num_pos, 5)
-        Returns:
-            Tensor: Centerness target.
-        """
-        # Convert positive bbox targets into gaussian distribution
-        xy, sigma = xy_wh_r_2_xy_sigma(pos_bbox_targets)
-        xy_offset = (xy - pos_points).unsqueeze(-1)
-
-        # Use gaussian kernel to calculate centerness
-        p1 = sigma.inverse() @ xy_offset
-        p2 = xy_offset.permute(0, 2, 1) @ p1
-        g_kernel = torch.exp(-0.5 * p2).squeeze(-1).squeeze(-1)
-
-        return g_kernel
 
     def _get_bboxes_single(self,
                            cls_scores,
