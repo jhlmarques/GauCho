@@ -40,15 +40,20 @@ pip install -e .
 
 ```
 
-We also provide an *environment.yml* file for creating a conda environment:
+### Docker
+
 ```
-conda env create -f environment.yml
+# Build the provided image
+docker build -t cvpr2025-gaucho .
+
+# Run
+docker run --gpus all --shm-size=8g -it -v {DATA_DIR}:/cvpr2025-gaucho/data cvpr2025-gaucho
 ```
 
 
 ## Train/Test
 
-Model config files are separated in a *baseline* and *gaucho* folder. Training and testing is done using the default [mmrotate scripts](https://mmrotate.readthedocs.io/en/latest/get_started.html#train-a-model)
+Model config files are separated in a *baseline* and *gaucho* folder. Training and testing can be done using the default [mmrotate scripts](https://mmrotate.readthedocs.io/en/latest/get_started.html#train-a-model). 
 
 ***Example: Train GauCho FCOS with ProbIoU loss on DOTA 1.0***
 ```
@@ -64,6 +69,14 @@ python tools/test.py \
     --eval mAP
 
 ```
+
+We also provide simple shell scripts for mass-training / testing configuration files.
+
+***Example: Train all baseline anchor-based detectors on HRSC2016 with KLD***
+```
+./train_configs configs_baseline/gaucho_one_stage_baseline_hrsc kld
+```
+
 
 ## Citation
 
@@ -83,7 +96,7 @@ If you use this model in your research, please consider citing:
 
 ## Acknowledgements
 
-Our work is heavily based on the [MMRotate benchmark](https://github.com/open-mmlab/mmrotate). Huge thanks to the OpenMMLab team and their contributors!
+Our codebase is built upon the [MMRotate benchmark](https://github.com/open-mmlab/mmrotate). Huge thanks to the OpenMMLab team and their contributors!
 
 ```
 @inproceedings{zhou2022mmrotate,
@@ -98,4 +111,3 @@ Our work is heavily based on the [MMRotate benchmark](https://github.com/open-mm
 
 ## To-do:
 - [ ] Reorganize code to better fit MMRotate organization standards
-- [ ] Add dockerfile for better reproducibility
