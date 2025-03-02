@@ -16,7 +16,7 @@ Federal University of Rio Grande do Sul
 
 [[`Paper`](https://arxiv.org/abs/2502.01565)] [[`Project`](https://github.com/jhlmarques/cvpr2025-gaucho/tree/main)] [[`BibTeX`](#citation)]
 
-**Gaucho** detects oriented objects with typical representations or Oriented ellipses. 
+**Gaucho** detects oriented objects with typical representations or Oriented ellipses. It relies in a novel regression head designed to directly predict Gaussian distributions based on the Cholesky matrix decomposition, which teorically mitigates the discontinuity problem.
 
 ![Gaucho](fondo_gaucho.png)
 
