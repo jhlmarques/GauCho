@@ -14,7 +14,7 @@ Federal University of Rio Grande do Sul
 
 </div>
 
-[[`Paper`](https://arxiv.org/abs/2502.01565)] [[`Project`]()] [[`BibTeX`](#citation)]
+[[`Paper`](https://arxiv.org/abs/2502.01565)] [[`Project`](https://github.com/jhlmarques/cvpr2025-gaucho/tree/main)] [[`BibTeX`](#citation)]
 
 ![Gaucho](fondo_gaucho.png)
 
