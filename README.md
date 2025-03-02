@@ -14,6 +14,8 @@ Federal University of Rio Grande do Sul
 
 </div>
 
+[[`Paper`](https://arxiv.org/abs/2502.01565)] [[`Project`]()] [[`BibTeX`](#citation)]
+
 ![Gaucho](fondo_gaucho.png)
 
 ## Abstract
