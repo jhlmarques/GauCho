@@ -18,6 +18,8 @@ Federal University of Rio Grande do Sul
 
 ## About
 
+![Gaucho](images/concept_gaucho.png)
+
 **GauCho** detects oriented objects with typical representations or Oriented Ellipses. It relies on a novel regression head designed to directly predict the parameters of 2D Gaussian distributions through the Cholesky decomposition of their covariance matrices, which theoretically mitigates the boundary discontinuity problem.
 
 ![Gaucho](images/fondo_gaucho.png)
