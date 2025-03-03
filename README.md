@@ -14,14 +14,13 @@ Federal University of Rio Grande do Sul
 
 </div>
 
-[[`Paper`](https://arxiv.org/abs/2502.01565)] [[`Project`](https://github.com/jhlmarques/cvpr2025-gaucho/tree/main)] [[`BibTeX`](#citation)]
+[[`Paper`](https://arxiv.org/abs/2502.01565)] [[`Project`](https://github.com/jhlmarques/GauCho)] [[`BibTeX`](#citation)]
 
-**Gaucho** detects oriented objects with typical representations or Oriented ellipses. It relies in a novel regression head designed to directly predict Gaussian distributions based on the Cholesky matrix decomposition, which teorically mitigates the discontinuity problem.
+## About
+
+**GauCho** detects oriented objects with typical representations or Oriented Ellipses. It relies on a novel regression head designed to directly predict the parameters of 2D Gaussian distributions through the Cholesky decomposition of their covariance matrices, which theoretically mitigates the boundary discontinuity problem.
 
 ![Gaucho](images/fondo_gaucho.png)
-
-## Abstract
-Oriented Object Detection (OOD) has received increased attention in the past years, being a suitable solution for detecting elongated objects in remote sensing analysis. In particular, using regression loss functions based on Gaussian distributions has become attractive since they yield simple and differentiable terms. However, existing solutions are still based on regression heads that produce Oriented Bounding Boxes (OBBs), and the known problem of angular boundary discontinuity persists. In this work, we propose a regression head for OOD that directly produces Gaussian distributions based on the Cholesky matrix decomposition. The proposed head, named GauCho, theoretically mitigates the boundary discontinuity problem and is fully compatible with recent Gaussian-based regression loss functions. Furthermore, we advocate using Oriented Ellipses (OEs) to represent oriented objects, which relates to GauCho through a bijective function and alleviates the encoding ambiguity problem for circular objects. Our experimental results show that GauCho can be a viable alternative to the traditional OBB head, achieving results comparable to or better than state-of-the-art detectors for the challenging dataset DOTA. Our code will be available at *\[this repository\]*.
 
 ## Install
 **Note: Some older Pytorch versions have a significantly slower implementation of the eigendecomposition functions, and should thus be avoided**
