@@ -14,7 +14,7 @@ Federal University of Rio Grande do Sul
 
 </div>
 
-[[`Paper`](https://arxiv.org/abs/2502.01565)] [[`Project`](https://github.com/jhlmarques/GauCho)] [[`BibTeX`](#citation)]
+[[`Paper`](https://openaccess.thecvf.com/content/CVPR2025/html/Marques_GauCho_Gaussian_Distributions_with_Cholesky_Decomposition_for_Oriented_Object_Detection_CVPR_2025_paper.html)] [[`Project`](https://github.com/jhlmarques/GauCho)] [[`BibTeX`](#citation)]
 
 ## About
 
@@ -90,15 +90,15 @@ We also provide simple shell scripts for mass-training / testing configuration f
 If you use this model in your research, please consider citing:
 
 ```
-@misc{murrugarrallerena2025gauchogaussiandistributionscholesky,
-      title={GauCho: Gaussian Distributions with Cholesky Decomposition for Oriented Object Detection}, 
-      author={Jeffri Murrugarra-LLerena and Jose Henrique Lima Marques and Claudio R. Jung},
-      year={2025},
-      eprint={2502.01565},
-      archivePrefix={arXiv},
-      primaryClass={cs.CV},
-      url={https://arxiv.org/abs/2502.01565}, 
+@InProceedings{Marques_2025_CVPR,
+    author    = {Marques, Jos\'e Henrique Lima and Murrugarra-Llerena, Jeffri and Jung, Claudio R.},
+    title     = {GauCho: Gaussian Distributions with Cholesky Decomposition for Oriented Object Detection},
+    booktitle = {Proceedings of the Computer Vision and Pattern Recognition Conference (CVPR)},
+    month     = {June},
+    year      = {2025},
+    pages     = {3593-3602}
 }
+
 ```
 
 ## Acknowledgements
