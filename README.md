@@ -14,7 +14,7 @@ Federal University of Rio Grande do Sul
 
 </div>
 
-[[`Paper`](https://openaccess.thecvf.com/content/CVPR2025/html/Marques_GauCho_Gaussian_Distributions_with_Cholesky_Decomposition_for_Oriented_Object_Detection_CVPR_2025_paper.html)] [[`Project`](https://github.com/jhlmarques/GauCho)] [[`BibTeX`](#citation)]
+[[`Paper`](https://openaccess.thecvf.com/content/CVPR2025/html/Marques_GauCho_Gaussian_Distributions_with_Cholesky_Decomposition_for_Oriented_Object_Detection_CVPR_2025_paper.html)] [[`Project`](https://artcs1.github.io/GauCho/)] [[`Code`](https://github.com/jhlmarques/GauCho)] [[`BibTeX`](#citation)]
 
 ## About
 
